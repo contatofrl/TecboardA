@@ -31,7 +31,16 @@ p{
 }
 
 img{
-    margin-left: 200px;
+    display: block;
+    margin: 0 auto;
+    max-width: fit-content;
+}
+
+.logo{
+    background-image: url("../img/logo-escura-tecboard.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 body{
@@ -52,15 +61,38 @@ span{
     color: #ceaa51;
 }
 a{
-    margin-left: 540px;
+    /*Layout e Alinhamento*/
+    display: flex; /* Necessário para justify-content e align-items funcionarem */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    /*Tamanho base menor e responsivo*/
+    width: 340px;
+    height: 66px;
+    box-sizing: border-box;
+
+    /*Tipografia mais compacta*/
     color: #ffffff;
     font-family: "Poppins", sans-serif;
     font-size: 24px;
     text-decoration: none;
-    background-color: #0a290b;
-    width: 340px;
-    height: 66px;
     text-align: center;
+    line-height: 1.2;
+
+    /*Visual arredondado e interação*/
+    background-color: #212830;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
+/* Efeito ao passar o mouse */
+a:hover {
+  background-color: #0a290b;
+  transform: scale(0.94); /* Diminui o tamanho do botão no hover */
+}
 
+/* Efeito ao clicar */
+a:active {
+  transform: scale(0.98);
+}
